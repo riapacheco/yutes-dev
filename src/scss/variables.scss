@@ -1,3 +1,19 @@
 
 /* --------------------------------- COLORS --------------------------------- */
 $black: #26282C;
+
+/* --------------------------------- GLOBALS -------------------------------- */
+$view-width: 100vw;
+$view-height: 100vh;
+
+/* --------------------------------- SIDEBAR -------------------------------- */
+$minimized: 60px;
+$expanded: 250px;
+$sidebar-height: 100vh;
+$padding: 15px;
+$content-height: calc($sidebar-height - ($padding * 2));
+$content-width: calc($expanded - ($padding * 2));
+$top-block-height: 3.5rem;
+$bottom-block-height: 2rem;
+$menu-padding: 2rem;
+$bg: white;

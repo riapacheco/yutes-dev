@@ -8,6 +8,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { GettingStartedComponent } from './views/getting-started/getting-started.component';
 import { UsageComponent } from './views/usage/usage.component';
 import { ConfigOverridesComponent } from './views/config-overrides/config-overrides.component';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ConfigOverridesComponent } from './views/config-overrides/config-overri
     SidebarComponent,
     GettingStartedComponent,
     UsageComponent,
-    ConfigOverridesComponent
+    ConfigOverridesComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,

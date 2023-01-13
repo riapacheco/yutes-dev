@@ -1,0 +1,23 @@
+@import '../../../scss/variables.scss';
+$gs-padding: 30px;
+$gs-card-padding: 20px;
+$gs-width: calc($view-width - $expanded);
+$gs-card-width: calc($gs-width - ($gs-padding * 2));
+$col-space: 2rem;
+.getting-started {
+  width: $gs-width;
+  padding: $gs-padding;
+
+  .two-card {
+    width: $gs-width;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    app-card {
+      // border: 1px solid red;
+      width: 48%;
+    }
+  }
+}
