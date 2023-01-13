@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+
+@import '@riapacheco/yutes/main.scss';
+@import '@riapacheco/yutes/inter-mixins.scss';
+@import 'scss/variables.scss';
+
+* { -webkit-font-smoothing: antialiased !important; }
+html {
+  font-size: 14px;
+  background-color: #FAFAFA;
+}
+body {
+  font-size: 1rem;
+
+}
+html, body {
+  color: $black;
+}
+

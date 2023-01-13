@@ -1,0 +1,161 @@
+@import '../../../scss/variables.scss';
+@import '@riapacheco/yutes/season/two.scss';
+
+:host { -webkit-font-smoothing: antialiased !important; }
+
+$minimized: 60px;
+$expanded: 250px;
+$sidebar-height: 100vh;
+$padding: 15px;
+$content-height: calc($sidebar-height - ($padding * 2));
+$content-width: calc($expanded - ($padding * 2));
+$top-block-height: 3.5rem;
+$bottom-block-height: 2rem;
+$menu-padding: 2rem;
+$bg: white;
+
+.sidebar {
+  // border: 1px solid red;
+  background-color: $bg;
+  width: $expanded;
+  height: $sidebar-height;
+  overflow-y: none;
+  overflow-x: none;
+  padding: $padding;
+
+  .sidebar-content {
+    height: $content-height;
+    max-height: $content-height;
+    width: $content-width;
+    max-width: $content-width;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    // border: 1px dashed grey;
+
+    .brand {
+      // border: 1px solid green;
+
+
+      width: 100%;
+      max-width: 100%;
+      height: $top-block-height;
+      max-height: $top-block-height;
+
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: flex-start;
+
+      border-radius: 4px;
+      padding: $padding;
+
+      h4 {
+        white-space: nowrap;
+      }
+      // border-bottom: 3px solid $black;
+    }
+
+    .menu {
+      // border: 1px solid blue;
+      width: 100%;
+      max-width: 100%;
+
+      height: calc($content-height - $top-block-height - $bottom-block-height);
+      padding-top: $menu-padding;
+      padding-bottom: $menu-padding;
+
+      .scroll-area {
+        width: 100%;
+        max-width: 100%;
+        height: calc($content-height - $top-block-height - $bottom-block-height - ($menu-padding * 2));
+        overflow-y: scroll;
+
+        /* --------------------------------- SECTION -------------------------------- */
+        ul {
+          width: calc($content-width - $padding);
+          margin-left: auto;
+          margin-bottom: 2rem;
+          li {
+
+            .section-label {
+              font-weight: 700;
+              display: flex;
+              flex-flow: row nowrap;
+              align-items: center;
+              justify-content: space-between;
+              transition: 200ms ease-in-out;
+              margin-top: 1rem;
+
+              .material-icons {
+                font-size: 1.2rem;
+                padding-top: 0.04rem;
+                margin-left: 0.5rem;
+                display: inline-block;
+                // border: 1px solid red;
+                display: inline-flex;
+                flex-flow: column nowrap;
+                align-items: center;
+                justify-content: center;
+              }
+
+              &:hover {
+                color: $canary-dark !important;
+              }
+
+              &.active {
+                color: $black;
+              }
+            }
+            ul {
+              width: calc($content-width - ($padding *2));
+              margin-left: auto;
+              margin-top: 1rem;
+
+              li {
+                font-weight: 500;
+                margin-bottom: 0.6rem;
+
+                &:last-child {
+                  margin-bottom: 0rem;
+                }
+
+                a {
+                  // border: 1px solid red;
+                  display: block;
+                  transition: 200ms ease-in-out;
+                  &:hover {
+                    transform: scale(1.05);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .information {
+      // border: 1px dotted grey;
+      height: $bottom-block-height;
+      max-height: $bottom-block-height;
+      width: 100%;
+      max-width: 100%;
+
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: flex-start;
+
+      a {
+        font-weight: 500;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+}

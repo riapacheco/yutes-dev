@@ -1,0 +1,50 @@
+
+<div class="sidebar">
+  <div class="sidebar-content">
+
+    <div class="brand">
+      <h3>Yutes</h3>
+    </div>
+
+    <div class="menu">
+      <div class="scroll-area">
+        <ul class="list-unstyled">
+          <!-- ------------------------------ SECTIONS ------------------------------- -->
+          <li *ngFor="let section of menuSections">
+            <a
+              [routerLink]="section.routerLink"
+              routerLinkActive="active"
+              class="section-label"
+              *ngIf="section.label">
+              {{ section.label }}
+              <i class="material-icons">
+                {{ section.isShowing ? 'expand_more' : 'chevron_left' }}
+              </i>
+            </a>
+
+            <!-- ---------------------------- LISTED ITEMS ----------------------------- -->
+            <ng-container *ngIf="section.isShowing">
+              <ul class="list-unstyled">
+                <li *ngFor="let item of section.items">
+                  <a>
+                    {{ item.label }}
+                  </a>
+                </li>
+              </ul>
+            </ng-container>
+
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="information">
+      <a>
+        <small>
+          View package on NPM
+        </small>
+      </a>
+    </div>
+
+  </div>
+</div>
